@@ -1,0 +1,153 @@
+/* =======================================================
+   1. CORE LAYOUT AND CONTAINER STYLES
+   ======================================================= */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* =======================================================
+   2. HEADER AND NEXT BUTTON STYLES
+   ======================================================= */
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Pushes H1 to left, button to right */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin: 0; 
+    font-size: 1.5em; /* Adjusted size to fit alongside the button */
+}
+
+/* Next Button Styling */
+#nextButton {
+    padding: 8px 15px;
+    border: none;
+    background-color: #dc3545; /* Red for 'disconnect/next' */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#nextButton:hover {
+    background-color: #c82333;
+}
+
+/* =======================================================
+   3. CHAT MESSAGES AND BOX STYLES
+   ======================================================= */
+.messages-box {
+    border: 1px solid #ddd;
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Base style for all messages (overridden by specific classes) */
+.message {
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    background-color: #e0f7fa; /* Default/fallback background */
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+/* Style for messages sent by the current user */
+.self-message {
+    text-align: right;
+    background-color: #d1e7dd; /* Light green/success color */
+    border-left: 5px solid #0f5132;
+    margin-left: 20%; /* Pushes your message to the right */
+}
+
+/* Style for messages received from the stranger/partner */
+.partner-message {
+    text-align: left;
+    background-color: #f8d7da; /* Light red/danger color for contrast */
+    border-right: 5px solid #842029;
+    margin-right: 20%; /* Keeps partner's message on the left */
+}
+
+/* =======================================================
+   4. INPUT FIELD AND SEND BUTTON STYLES
+   ======================================================= */
+#messageInput {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+/* Send Button Style */
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* =======================================================
+   5. SYSTEM MESSAGE STYLES (INFO, SUCCESS, WARNING, ERROR)
+   ======================================================= */
+.system-message {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.system-info {
+    color: #0d6efd;
+    background-color: #cff4fc;
+    border: 1px solid #b6effb;
+}
+
+.system-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    font-weight: bold;
+}
+
+.system-warning {
+    color: #664d03;
+    background-color: #fff3cd;
+    border: 1px solid #ffecb5;
+}
+
+.system-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    font-weight: bold;
+}
